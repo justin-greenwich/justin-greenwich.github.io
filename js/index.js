@@ -44,152 +44,156 @@ var arr = [
 ];
 var position = 0;
 var count = 0;
-var buttonA = document.getElementById("answerA");
-var buttonB = document.getElementById("answerB");
-var buttonC = document.getElementById("answerC");
-var buttonD = document.getElementById("answerD");
-var progressbar = document.getElementById("progress");
-var alertDialog = document.getElementById("alert");
-var alertContent = document.getElementById("alert-content");
-var buttonOK = document.getElementById("btnOK");
+var buttonA = $("#answerA");
+var buttonB = $("#answerB");
+var buttonC = $("#answerC");
+var buttonD = $("#answerD");
+var progressbar = $("#progress");
+var alertDialog = $("#alert");
+var alertContent = $("#alert-content");
+var buttonOK = $("#btnOK");
+var content_question = $("#content-question");
+var contentA = $("#contentA");
+var contentB = $("#contentB");
+var contentC = $("#contentC");
+var contentD = $("#contentD");
 var run;
 function init() {
-	progressbar.setAttribute("value", "100");
+	progressbar.attr("value", "100");
 	position = Math.floor((Math.random() * 40) + 1);
-	document.getElementById("content-question").innerText = arr[position].question;
-	document.getElementById("contentA").innerText = arr[position].a;
-	document.getElementById("contentB").innerText = arr[position].b;
-	document.getElementById("contentC").innerText = arr[position].c;
-	document.getElementById("contentD").innerText = arr[position].d;
+	content_question.text(arr[position].question);
+	contentA.text(arr[position].a);
+	contentB.text(arr[position].b);
+	contentC.text(arr[position].c);
+	contentD.text(arr[position].d);
 }
 init();
 function move() {
-	var max = progressbar.getAttribute("max");
-	var val = progressbar.getAttribute("value");
-	var time = (1000 / max) * 3;
+	var max = progressbar.attr("max");
+	var val = progressbar.attr("value");
+	var time = (1000 / max) * 10;
 	run = setInterval(function () {
 		/* body... */
 		if(val == 0) {
 			count = 0;
 			clearInterval(run);
-			alertDialog.style.display = "block";
-			alertContent.innerText = "You Lose";
+			alertDialog.css("display","block");
+			alertContent.text("You Lose");
 			return;
 		}
-		val--;
-		progressbar.setAttribute("value", val);
+		val-=5;
+		progressbar.attr("value", val);
 	}, time);
 }
 move();
 function changeQuestion() {
-	document.getElementById("content-question").innerText = arr[position].question;
-	document.getElementById("contentA").innerText = arr[position].a;
-	document.getElementById("contentB").innerText = arr[position].b;
-	document.getElementById("contentC").innerText = arr[position].c;
-	document.getElementById("contentD").innerText = arr[position].d;
+	content_question.text(arr[position].question);
+	contentA.text(arr[position].a);
+	contentB.text(arr[position].b);
+	contentC.text(arr[position].c);
+	contentD.text(arr[position].d);
 }
 function check() {
-	buttonA.addEventListener("click", function () {
-	/* body... */
+	buttonA.click(function() {
+		/* Act on the event */
 		if(arr[position].dapandung == 1) {
 			count++;
 			if(count > 40) {				
 				clearInterval(run);
-				alertDialog.style.display = "block";
-				alertContent.innerText = "You Win";
+				alertDialog.css("display","block");
+				alertContent.text("You Win");
 				//progressbar.setAttribute("value", "100");
 			}
 			else {
 				clearInterval(run);
-				progressbar.setAttribute("value", "100");
+				progressbar.attr("value", "100");
 				position = Math.floor((Math.random() * 40) + 1);;
 				changeQuestion();
 				move();
 			}
 		} else {
 			clearInterval(run);
-			alertDialog.style.display = "block";
-			alertContent.innerText = "You Lose";
+			alertDialog.css("display","block");
+			alertContent.text("You Lose");
 			//progressbar.setAttribute("value", "100");
 		}
 	});
-	buttonB.addEventListener("click", function () {
-		/* body... */
+	buttonB.click(function() {
+		/* Act on the event */
 		if(arr[position].dapandung == 2) {
 			count++;
 			if(count > 40) {				
 				clearInterval(run);
-				alertDialog.style.display = "block";
-				alertContent.innerText = "You Win";
+				alertDialog.css("display","block");
+				alertContent.text("You Win");
 				//progressbar.setAttribute("value", "100");			
 			}
 			else {
 				clearInterval(run);
-				progressbar.setAttribute("value", "100");
+				progressbar.attr("value", "100");
 				position = Math.floor((Math.random() * 40) + 1);;
 				changeQuestion();
 				move();
 			}
 		} else {
 			clearInterval(run);
-			alertDialog.style.display = "block";
-			alertContent.innerText = "You Lose";
+			alertDialog.css("display","block");
+			alertContent.text("You Lose");
 			//progressbar.setAttribute("value", "100");
 		}
 	});
-	buttonC.addEventListener("click", function () {
-		/* body... */
+	buttonC.click(function() {
+		/* Act on the event */
 		if(arr[position].dapandung == 3) {
 			count++;
 			if(count > 40) {				
 				clearInterval(run);
-				alertDialog.style.display = "block";
-				alertContent.innerText = "You Win";
+				alertDialog.css("display","block");
+				alertContent.text("You Win");
 				//progressbar.setAttribute("value", "100");
 			}
 			else {
 				clearInterval(run);
-				progressbar.setAttribute("value", "100");
+				progressbar.attr("value", "100");
 				position = Math.floor((Math.random() * 40) + 1);;
 				changeQuestion();
 				move();
 			}
 		} else {
 			clearInterval(run);
-			alertDialog.style.display = "block";
-			alertContent.innerText = "You Lose";
+			alertDialog.css("display","block");
+			alertContent.text("You Lose");
 			//progressbar.setAttribute("value", "100");
 		}
 	});	
-	buttonD.addEventListener("click", function () {
-		/* body... */
+	buttonD.click(function(event) {
+		/* Act on the event */
 		if(arr[position].dapandung == 4) {
 			count++;
 			if(count > 40) {				
 				clearInterval(run);
-				alertDialog.style.display = "block";
-				alertContent.innerText = "You Win";
+				alertDialog.css("display","block");
+				alertContent.text("You Win");
 				//progressbar.setAttribute("value", "100");
 			}
 			else {
 				clearInterval(run);
-				progressbar.setAttribute("value", "100");
+				progressbar.attr("value", "100");
 				position = Math.floor((Math.random() * 40) + 1);;
 				changeQuestion();
 				move();
 			}
 		} else {
 			clearInterval(run);
-			alertDialog.style.display = "block";
-			alertContent.innerText = "You Lose";
+			alertDialog.css("display","block");
+			alertContent.text("You Lose");
 			//progressbar.setAttribute("value", "100");
 		}
 	});
-	btnOK.addEventListener("click", function () {
-		/* body... */
-		alertDialog.style.display = "none";
+	buttonOK.click(function() {
+		/* Act on the event */
+		alertDialog.css("display","none");
 		init();
 	});
-
 }
 check();
