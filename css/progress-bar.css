@@ -1,0 +1,73 @@
+@-webkit-keyframes animate-stripes {
+   100% { background-position: -100px 0px; }
+}
+
+@keyframes animate-stripes {
+   100% { background-position: -100px 0px; }
+}
+progress::-ms-fill {
+  -ms-background-color: #eee;
+  -ms-border-radius: 2px;
+  -ms-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+  -ms-border: none;
+}
+progress[value]::-ms-fill {
+  background:
+	   -ms-linear-gradient(-45deg, 
+	                           transparent 33%, rgba(0, 0, 0, .1) 33%, 
+	                           rgba(0,0, 0, .1) 66%, transparent 66%),
+	   -ms-linear-gradient(top, 
+	                           rgba(255, 255, 255, .25), 
+	                           rgba(0, 0, 0, .25)),
+	   -ms-linear-gradient(left, #09c, #f44);
+
+    -ms-border-radius: 2px; 
+    -ms-background-size: 35px 20px, 100% 100%, 100% 100%;
+    -ms-animation: animate-stripes 5s linear infinite;
+    /*animation: animate-stripes 5s linear infinite;*/
+}
+progress[value]::-moz-progress-bar {
+  background-color: #eee;
+  -moz-border-radius: 2px;
+  -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+progress::-moz-progress-bar {
+  /* style rules */
+  background:
+     -moz-linear-gradient(-45deg, 
+                             transparent 33%, rgba(0, 0, 0, .1) 33%, 
+                             rgba(0,0, 0, .1) 66%, transparent 66%),
+     -moz-linear-gradient(top, 
+                             rgba(255, 255, 255, .25), 
+                             rgba(0, 0, 0, .25)),
+     -moz-linear-gradient(left, #09c, #f44);
+  -moz-border-radius: 2px;
+  -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+  -moz-background-size: 35px 20px, 100% 100%, 100% 100%;
+  -moz-animation: animate-stripes 5s linear infinite;
+  /*-moz-animation: animate-stripes 5s linear infinite;*/
+  -moz-border: 0;
+}
+progress[value]::-webkit-progress-bar {
+  /* style rules */
+  background-color: #eee;
+  -webkit-border-radius: 2px;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+progress::-webkit-progress-value {
+  /* style rules */
+  background:
+     -webkit-linear-gradient(-45deg, 
+                             transparent 33%, rgba(0, 0, 0, .1) 33%, 
+                             rgba(0,0, 0, .1) 66%, transparent 66%),
+     -webkit-linear-gradient(top, 
+                             rgba(255, 255, 255, .25), 
+                             rgba(0, 0, 0, .25)),
+     -webkit-linear-gradient(left, #09c, #f44);
+
+    -webkit-border-radius: 2px; 
+    -webkit-background-size: 35px 20px, 100% 100%, 100% 100%;
+    -webkit-animation: animate-stripes 5s linear infinite;
+    /*-webkit-animation: animate-stripes 5s linear infinite;*/
+}
