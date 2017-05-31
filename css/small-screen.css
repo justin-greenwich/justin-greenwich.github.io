@@ -1,8 +1,8 @@
 @media only screen and (max-device-width: 600px) {
 	.wrap {
-		left: 20%;
+		left: 5%;
 		top: 50%;
-		right: 20%;
+		right: 5%;
 		margin-top: -20%;
 	}
 	#alert {
@@ -12,7 +12,7 @@
 		margin-top: -15%;
 	}
 	#alert-content {
-		font-size: 26px;
+		font-size: 40px;
 		padding-top: 100px;
 		padding-bottom: 100px;
 	}
@@ -24,7 +24,7 @@
 	    font-size: 14px;
 	}
 	#question p {
-		font-size: 20px;
+		font-size: 40px;
 		padding-top: 60px;
 		padding-bottom: 60px;
 	}
@@ -44,7 +44,7 @@
 		background: rgba(255, 255, 255, 0.35);
 		box-shadow: 0 5px 5px rgba(0, 0, 0, 0.25);
 		font-family: 'lobster', cursive;
-		font-size: 20px;
+		font-size: 40px;
 		padding-top: 20px;
 		padding-bottom: 20px;
 		text-align: center
