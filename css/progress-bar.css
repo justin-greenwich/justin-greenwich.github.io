@@ -9,7 +9,7 @@ progress::-ms-fill {
   -ms-background-color: #eee;
   -ms-border-radius: 2px;
   -ms-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
-  -ms-border: none;
+  border: none;
 }
 progress[value]::-ms-fill {
   background:
@@ -23,7 +23,7 @@ progress[value]::-ms-fill {
 
     -ms-border-radius: 2px; 
     -ms-background-size: 35px 20px, 100% 100%, 100% 100%;
-    -ms-animation: animate-stripes 5s linear infinite;
+    animation: animate-stripes 5s linear infinite;
     /*animation: animate-stripes 5s linear infinite;*/
 }
 progress[value]::-moz-progress-bar {
@@ -46,7 +46,7 @@ progress::-moz-progress-bar {
   -moz-background-size: 35px 20px, 100% 100%, 100% 100%;
   -moz-animation: animate-stripes 5s linear infinite;
   /*-moz-animation: animate-stripes 5s linear infinite;*/
-  -moz-border: 0;
+  border: 0;
 }
 progress[value]::-webkit-progress-bar {
   /* style rules */

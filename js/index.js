@@ -68,20 +68,23 @@ function init() {
 	contentD.text(arr[position].d);
 }
 init();
+function handle() {
+	count = 0;
+	alertDialog.css("display","block");
+	alertContent.text("You Lose");
+}
 function move() {
 	var max = progressbar.attr("max");
 	var val = progressbar.attr("value");
-	var time = (1000 / max) * 10;
+	var time = (1000 / max) * 5;
 	run = setInterval(function () {
 		/* body... */
-		if(val == 0) {
-			count = 0;
+		if(val == 0) {	
 			clearInterval(run);
-			alertDialog.css("display","block");
-			alertContent.text("You Lose");
+			handle();
 			return;
 		}
-		val-=5;
+		val--;
 		progressbar.attr("value", val);
 	}, time);
 }
@@ -197,3 +200,19 @@ function check() {
 	});
 }
 check();
+
+function Caculator() {
+	var a  = 10;
+	var b = 11;
+	var sum = a  + b;
+	var sub = a - b;
+	var mul = a * b;
+	var quotient = a / b;
+	var remainder = a % b;
+	console.log('Sum : ' + sum);
+	console.log('Sub : ' + sub);
+	console.log('Mul : ' + mul);
+	console.log("Quotient : " + quotient);
+	console.log('Remainder : ' + remainder);
+}
+

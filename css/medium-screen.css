@@ -1,0 +1,12 @@
+@media only screen and (min-device-width: 600px) and (max-device-width: 1000px) {
+	.wrap {
+		left: 20%;
+		top: 20%;
+		right: 20%;
+	}
+	#alert {
+		top: 30%;
+		left: 15%;
+		right: 15%;
+	}
+}

@@ -1,0 +1,59 @@
+@media only screen and (max-device-width: 600px) {
+	.wrap {
+		left: 20%;
+		top: 20%;
+		right: 20%;
+	}
+	#alert {
+		top: 25%;
+		left: 10%;
+		right: 10%;
+	}
+	#alert-content {
+		font-size: 26px;
+		padding-top: 100px;
+		padding-bottom: 100px;
+	}
+	#btnOK {
+	    /* margin: auto; */
+	    padding-top: 8px;
+	    padding-bottom: 8px;
+	    /* margin-bottom: 50px; */
+	    font-size: 14px;
+	}
+	#question p {
+		font-size: 12px;
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
+	#answer {
+		width: 100%;
+		/*margin: auto;*/
+	}
+	.row {
+		width: 100%;
+		height: auto;
+		overflow: auto;
+		margin-top: 20px;
+	}
+	.box {
+		float: left;
+		width: 47.5%;
+		background: rgba(255, 255, 255, 0.35);
+		box-shadow: 0 5px 5px rgba(0, 0, 0, 0.25);
+		font-family: 'lobster', cursive;
+		font-size: 12px;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		text-align: center
+	}
+	.clear {
+		clear: both;
+	}
+	#answerA {
+		margin-right: 5%;
+	}
+	#answerC {
+		margin-right: 5%;
+	}
+}
