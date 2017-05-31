@@ -1,7 +1,8 @@
 @media only screen and (min-device-width: 1000px) {
 	.wrap {
 		left: 20%;
-		top: 50px;
+		top: 50%;
 		right: 20%;
+		margin-top: -20%; 
 	}
 } 

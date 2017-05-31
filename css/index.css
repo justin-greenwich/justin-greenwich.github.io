@@ -50,9 +50,10 @@ body {
 }
 #alert {
 	z-index: 3;
-	top: 100px;
-	left: 30%;
-	right: 30%;
+	top: 50%;
+	left: 15%;
+	right: 15%;
+	margin-top: -15%;
 	position: fixed;
 	display: none;
 	background:

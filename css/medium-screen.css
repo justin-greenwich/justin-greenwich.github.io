@@ -1,12 +1,19 @@
 @media only screen and (min-device-width: 600px) and (max-device-width: 1000px) {
 	.wrap {
 		left: 20%;
-		top: 20%;
+		top: 50%;
 		right: 20%;
+		margin-top: -26%;
 	}
 	#alert {
-		top: 30%;
+		top: 50%;
 		left: 15%;
 		right: 15%;
+		margin-top: -15%;
 	}
+	#question p {
+		padding-top: 70px;
+		padding-bottom: 70px;
+	}
+
 }
