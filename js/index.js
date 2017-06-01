@@ -1,3 +1,7 @@
+$(function() {
+	/* Act on the event */
+	$('.loading').css("display","none");
+});
 var arr = [
 	{question: "Quần rộng nhất là quần gì ?",a: "A. Quần dài",b: "B. Quần short",c: "C. Quần đảo",d: "D. Quần đùi",dapandung: 3},
 	{question: "2 con vịt đi trước 2 con vịt, 2 con vịt đi sau 2 con vịt, 2 con vịt đi giữa 2 con vịt. Hỏi có mấy con vịt?",a: "A. 4",b: "B. 3",c: "C. 2",d: "D. 1",dapandung: 1},
@@ -52,35 +56,48 @@ var contentB = $("#contentB");
 var contentC = $("#contentC");
 var contentD = $("#contentD");
 var run;
+
 if(screen.width < 600) { 
 	$(".wrap").css("top", ($(window).height() - $(".wrap").height())/2  + 'px');
 	$("#alert").css("top", ($(window).height() - $("#alert").height())/2  + 'px');
+	$("#loading-content").css("top", ($(window).height() - $("#loading-content").height())/2  + 'px');
+	$("#loading-content").css("left", ($(window).width() - $("#loading-content").width())/2  + 'px');
 }
 if(screen.width >= 600 && screen.width <= 900) {
 	$(".wrap").css("top", ($(window).height() - $(".wrap").height())/2  + 'px');
 	$("#alert").css("top", ($(window).height() - $("#alert").height())/2  + 'px');
+	$("#loading-content").css("top", ($(window).height() - $("#loading-content").height())/2  + 'px');
+	$("#loading-content").css("left", ($(window).width() - $("#loading-content").width())/2  + 'px');
 }
 if(screen.width >= 900) {
 	$(".wrap").css("top", ($(window).height() - $(".wrap").height())/2  + 'px');
 	$("#alert").css("top", ($(window).height() - $("#alert").height())/2  + 'px');
+	$("#loading-content").css("top", ($(window).height() - $("#loading-content").height())/2  + 'px');
+	$("#loading-content").css("left", ($(window).width() - $("#loading-content").width())/2  + 'px');
 }
 $( window ).resize(function() {
   	if(screen.width < 600) { 
 		$(".wrap").css("top", ($(window).height() - $(".wrap").height())/2  + 'px');
 		$("#alert").css("top", ($(window).height() - $("#alert").height())/2  + 'px');
+		$("#loading-content").css("top", ($(window).height() - $("#loading-content").height())/2  + 'px');
+		$("#loading-content").css("left", ($(window).width() - $("#loading-content").width())/2  + 'px');
 	}
 	if(screen.width >= 600 && screen.width <= 900) {
 		$(".wrap").css("top", ($(window).height() - $(".wrap").height())/2  + 'px');
 		$("#alert").css("top", ($(window).height() - $("#alert").height())/2  + 'px');
+		$("#loading-content").css("top", ($(window).height() - $("#loading-content").height())/2  + 'px');
+		$("#loading-content").css("left", ($(window).width() - $("#loading-content").width())/2  + 'px');
 	}
 	if(screen.width >= 900) {
 		$(".wrap").css("top", ($(window).height() - $(".wrap").height())/2  + 'px');
 		$("#alert").css("top", ($(window).height() - $("#alert").height())/2  + 'px');
+		$("#loading-content").css("top", ($(window).height() - $("#loading-content").height())/2  + 'px');
+		$("#loading-content").css("left", ($(window).width() - $("#loading-content").width())/2  + 'px');
 	}
 });
 function init() {
 	progressbar.attr("value", "100");
-	position = Math.floor((Math.random() * 36) + 1);
+	position = Math.floor((Math.random() * 35) + 1);
 	content_question.text(arr[position].question);
 	contentA.text(arr[position].a);
 	contentB.text(arr[position].b);
@@ -130,7 +147,7 @@ function check() {
 			else {
 				clearInterval(run);
 				progressbar.attr("value", "100");
-				position = Math.floor((Math.random() * 36) + 1);;
+				position = Math.floor((Math.random() * 35) + 1);;
 				changeQuestion();
 				move();
 			}
@@ -154,12 +171,13 @@ function check() {
 			else {
 				clearInterval(run);
 				progressbar.attr("value", "100");
-				position = Math.floor((Math.random() * 36) + 1);;
+				position = Math.floor((Math.random() * 35) + 1);;
 				changeQuestion();
 				move();
 			}
 		} else {
 			clearInterval(run);
+			alertDialog.css("display","block");
 			alertContent.text("You Lose");
 			//progressbar.setAttribute("value", "100");
 		}
@@ -177,7 +195,7 @@ function check() {
 			else {
 				clearInterval(run);
 				progressbar.attr("value", "100");
-				position = Math.floor((Math.random() * 36) + 1);;
+				position = Math.floor((Math.random() * 35) + 1);;
 				changeQuestion();
 				move();
 			}
@@ -201,7 +219,7 @@ function check() {
 			else {
 				clearInterval(run);
 				progressbar.attr("value", "100");
-				position = Math.floor((Math.random() * 36) + 1);;
+				position = Math.floor((Math.random() * 35) + 1);;
 				changeQuestion();
 				move();
 			}
@@ -219,5 +237,7 @@ function check() {
 	});
 }
 check();
+
+
 
 
