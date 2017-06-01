@@ -58,6 +58,32 @@ var contentB = $("#contentB");
 var contentC = $("#contentC");
 var contentD = $("#contentD");
 var run;
+if(screen.width < 600) { 
+	$(".wrap").css("top", ($(window).height() - $(".wrap").height())/2  + 'px');
+	$("#alert").css("top", ($(window).height() - $("#alert").height())/2  + 'px');
+}
+if(screen.width >= 600 && screen.width <= 900) {
+	$(".wrap").css("top", ($(window).height() - $(".wrap").height())/2  + 'px');
+	$("#alert").css("top", ($(window).height() - $("#alert").height())/2  + 'px');
+}
+if(screen.width >= 900) {
+	$(".wrap").css("top", ($(window).height() - $(".wrap").height())/2  + 'px');
+	$("#alert").css("top", ($(window).height() - $("#alert").height())/2  + 'px');
+}
+$( window ).resize(function() {
+  	if(screen.width < 600) { 
+		$(".wrap").css("top", ($(window).height() - $(".wrap").height())/2  + 'px');
+		$("#alert").css("top", ($(window).height() - $("#alert").height())/2  + 'px');
+	}
+	if(screen.width >= 600 && screen.width <= 900) {
+		$(".wrap").css("top", ($(window).height() - $(".wrap").height())/2  + 'px');
+		$("#alert").css("top", ($(window).height() - $("#alert").height())/2  + 'px');
+	}
+	if(screen.width >= 900) {
+		$(".wrap").css("top", ($(window).height() - $(".wrap").height())/2  + 'px');
+		$("#alert").css("top", ($(window).height() - $("#alert").height())/2  + 'px');
+	}
+});
 function init() {
 	progressbar.attr("value", "100");
 	position = Math.floor((Math.random() * 40) + 1);
