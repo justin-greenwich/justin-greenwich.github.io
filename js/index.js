@@ -1,6 +1,8 @@
 $(function() {
 	/* Act on the event */
-	$('.loading').css("display","none");
+	setTimeout(function () {
+        $('.loading').css("display","none");
+    }, 2000);
 });
 var arr = [
 	{question: "Quần rộng nhất là quần gì ?",a: "A. Quần dài",b: "B. Quần short",c: "C. Quần đảo",d: "D. Quần đùi",dapandung: 3},
@@ -125,7 +127,6 @@ function move() {
 		progressbar.attr("value", val);
 	}, time);
 }
-move();
 function changeQuestion() {
 	content_question.text(arr[position].question);
 	contentA.text(arr[position].a);
